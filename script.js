@@ -29,4 +29,4 @@ function calcular(event){
 
 setInterval(() => {
     location.reload();
-}, 15000);
+}, 60000);
