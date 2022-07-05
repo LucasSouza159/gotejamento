@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculo de gotejamento</title>
+</head>
+<body>
+    <form onsubmit="return calcular(event)" class="container">
+        <div class="valores">
+            <label for>Volume</label>
+            <input type="text" placeholder="Digite as gotas aqui" id="volume">
+            <label>Tempo</label>
+            <input type="text" placeholder="Digite o tempo aqui" id="tempo">
+        </div>
+
+        <div class="opcoes">
+            <input type="radio" value="microgotasPorHora" class="calc">Microgotas p/hora
+            <input type="radio" value="microgotasPorMinuto" class="calc">Microgotas p/minuto
+            <input type="radio" value="gotasPorHora" class="calc">Gotas p/hora
+            <input type="radio" value="gotasPorMinuto" class="calc">Gotas p/minuto
+        </div>
+
+        <input type="submit" value="Calcular" class="btn">
+        <p id="resultado"></p>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
