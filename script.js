@@ -16,7 +16,7 @@ function calcular(event){
                 calc = volume * 60 / tempo;
                 resultado.innerHTML = calc + " Microgotas por minuto";
             }else if(opcoes[i].value == "gotasPorHora"){
-                calc = volume / tempo * 3;
+                calc = (volume / tempo) * 3;
                 resultado.innerHTML = calc + " Gotas por hora";
             }else if(opcoes[i].value == "gotasPorMinuto"){
                 calc = volume * 20 / tempo;
