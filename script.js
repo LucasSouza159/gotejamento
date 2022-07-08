@@ -1,6 +1,5 @@
 function calcular(event){
     event.preventDefault();
-
     let volume = document.getElementById("volume").value;
     let tempo = document.getElementById("tempo").value;
     let opcoes = document.querySelectorAll(".calc");
@@ -10,17 +9,17 @@ function calcular(event){
     for(i = 0; i < opcoes.length; i++){
         if(opcoes[i].checked){
             if(opcoes[i].value == "microgotasPorHora"){
-                calc = volume / (tempo * 60);
-                resultado.innerHTML = calc + " Microgotas por hora";
+                calc = (volume / (tempo * 60));
+                resultado.innerHTML = calc.toFixed(2) + " Microgotas por minuto";
             }else if(opcoes[i].value == "microgotasPorMinuto"){
-                calc = volume * 60 / (tempo * 60);
-                resultado.innerHTML = calc + " Microgotas por minuto";
+                calc = (volume * 60 / (tempo * 60));
+                resultado.innerHTML = calc.toFixed(2) + " Microgotas por minuto";
             }else if(opcoes[i].value == "gotasPorHora"){
                 calc = (volume / (tempo * 60)) * 3;
-                resultado.innerHTML = calc + " Gotas por hora";
+                resultado.innerHTML = calc.toFixed(2) + " Gotas por minuto";
             }else if(opcoes[i].value == "gotasPorMinuto"){
-                calc = volume * 20 / (tempo * 60);
-                resultado.innerHTML = calc + " Gotas por minuto"
+                calc = volume * 20 / (tempo * 60);  
+                resultado.innerHTML = calc.toFixed(2) + " Gotas por minuto"
             }
         }
     }

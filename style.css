@@ -35,6 +35,9 @@ body{
     padding: 10px;
 }
 .opcoes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 300px;
     text-align: center;
 }
